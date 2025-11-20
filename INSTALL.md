@@ -1,6 +1,6 @@
 # Installation Guide for SAM 3D Body
 
-## Step-by-Step Installation
+## Setup Python Environment
 
 ### 1. Create and Activate Environment
 
@@ -30,3 +30,16 @@ pip install 'git+https://github.com/facebookresearch/detectron2.git@a1ce2f9' --n
 ```bash
 pip install git+https://github.com/microsoft/MoGe.git
 ```
+
+
+## Getting Model Checkpoints
+
+We host model checkpoints on Hugging Face. **Available models:**
+- [`facebook/sam-3d-body-dinov3`](https://huggingface.co/facebook/sam-3d-body-dinov3)
+- [`facebook/sam-3d-body-vith`](https://huggingface.co/facebook/sam-3d-body-vith)
+
+
+⚠️ Please note that you need to **request access** on the SAM 3D Body Hugging Face repos above. Once accepted, you need to be authenticated to download the checkpoints.
+
+⚠️ SAM 3D Body is available via HuggingFace globally, **except** in comprehensively sanctioned jurisdictions. Sanctioned jurisdiction will result in requests being **rejected**.
+

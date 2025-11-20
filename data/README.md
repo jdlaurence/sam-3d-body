@@ -1,5 +1,9 @@
 This repository provides setup instructions and utilities for preparing and processing datasets used in SAM-3D-Body, including downloading annotations and creating WebDataset archives.
 
+⚠️ Please note that you need to **request access** on the SAM 3D Body [Hugging Face repo](https://huggingface.co/datasets/facebook/sam-3d-body-dataset). Once accepted, you need to be authenticated to download the checkpoints.
+
+⚠️ SAM 3D Body data is available via HuggingFace globally, **except** in comprehensively sanctioned jurisdictions. Sanctioned jurisdiction will result in requests being **rejected**.
+
 ## 🧩 Environment Setup
 
 Create and configure the conda environment for dataset preparation:
