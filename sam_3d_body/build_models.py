@@ -35,6 +35,17 @@ def load_sam_3d_body(checkpoint_path: str = "", device: str = "cuda", mhr_path: 
         state_dict = checkpoint
     load_state_dict(model, state_dict, strict=False)
 
+    # --- INSERT THIS BLOCK ---
+    # If the code asks for CUDA but you are on a Mac, force it to use MPS
+    if device == "cuda" and not torch.cuda.is_available():
+        if torch.backends.mps.is_available():
+            print("Warning: CUDA not found. Switching to MPS (Apple Silicon).")
+            device = "mps"
+        else:
+            print("Warning: CUDA not found. Switching to CPU.")
+            device = "cpu"
+    # -------------------------
+
     model = model.to(device)
     model.eval()
     return model, model_cfg
